@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import CustomCursor from "@/components/CustomCursor";
 import SectionFadeIn from "@/components/SectionFadeIn";
-import ContactForm from "@/components/ContactForm";
+import { Twitter, Linkedin } from "lucide-react";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -263,14 +263,32 @@ export default function Index() {
         </div>
       </SectionFadeIn>
 
-      {/* Contact (Form) */}
+      {/* Contact Section */}
       <SectionFadeIn className="section pt-12 pb-20" id="contact">
-        <div className="contact bg-glass rounded-2xl px-6 py-14 border border-primary/20 shadow-glow max-w-2xl mx-auto">
-          <h2 className="section-title text-3xl md:text-4xl heading-gradient mb-5 font-extrabold text-center">Ready to elevate your product with cloud-scale AI?</h2>
-          <div className="text-center text-base opacity-85 mb-8">
-            Schedule a chat and tell me what you’d like to build! I’ll personally get back to you within a business day.
+        <div className="contact bg-glass rounded-2xl px-6 py-14 md:px-12 md:py-16 border border-primary/20 shadow-glow max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="text-center md:text-left">
+              <h2 className="section-title text-3xl md:text-4xl heading-gradient mb-4 font-extrabold">I'm always up for a chat.</h2>
+              <p className="text-lg opacity-85 mb-6">
+                Pop me an email at <a href="mailto:sreepurna.jasti@gmail.com" className="font-semibold text-primary hover:underline">sreepurna.jasti@gmail.com</a> or give me a shout on social media.
+              </p>
+              <div className="flex justify-center md:justify-start gap-6">
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-light hover:text-primary transition-colors">
+                  <Twitter size={28} />
+                </a>
+                <a href="https://www.linkedin.com/in/sreepurna-jasti/" target="_blank" rel="noopener noreferrer" className="text-light hover:text-primary transition-colors">
+                  <Linkedin size={28} />
+                </a>
+              </div>
+            </div>
+            <div className="flex justify-center order-first md:order-last">
+              <img 
+                src="/lovable-uploads/a40954af-cf1a-488a-8094-e7ad275693b2.png" 
+                alt="An illustration of a woman with glasses and short hair, smiling." 
+                className="w-full max-w-xs md:max-w-sm"
+              />
+            </div>
           </div>
-          <ContactForm />
         </div>
       </SectionFadeIn>
 
