@@ -3,6 +3,7 @@ import AnimatedBackground from "@/components/AnimatedBackground";
 import CustomCursor from "@/components/CustomCursor";
 import SectionFadeIn from "@/components/SectionFadeIn";
 import { Twitter, Linkedin } from "lucide-react";
+import Doodle from "@/components/Doodle";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -237,11 +238,14 @@ export default function Index() {
       {/* Contact Section */}
       <SectionFadeIn className="section pt-12 pb-20" id="contact">
         <div className="contact bg-glass rounded-2xl px-6 py-14 md:px-12 md:py-16 border border-primary/20 shadow-glow max-w-2xl mx-auto">
-          <div className="text-center">
-            <h2 className="section-title text-3xl md:text-4xl heading-gradient mb-4 font-extrabold">I'm always up for a chat.</h2>
-            <p className="text-lg opacity-85">
-              Pop me an email at <a href="mailto:sreepurna.jasti@gmail.com" className="font-semibold text-primary hover:underline">sreepurna.jasti@gmail.com</a>.
-            </p>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+            <Doodle />
+            <div className="text-center md:text-left">
+              <h2 className="section-title text-3xl md:text-4xl heading-gradient mb-4 font-extrabold">I'm always up for a chat.</h2>
+              <p className="text-lg opacity-85">
+                Pop me an email at <a href="mailto:sreepurna.jasti@gmail.com" className="font-semibold text-primary hover:underline">sreepurna.jasti@gmail.com</a>.
+              </p>
+            </div>
           </div>
         </div>
       </SectionFadeIn>

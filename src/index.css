@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-mint: rgba(0, 245, 255, 0.1);
+}
+
 body {
   @apply bg-dark text-light font-space-grotesk scroll-smooth;
 }
