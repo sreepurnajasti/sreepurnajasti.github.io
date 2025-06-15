@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import CustomCursor from "@/components/CustomCursor";
@@ -83,12 +84,12 @@ const skills = [
 const projects = [
   {
     title: "SSHRC Digital Modernization",
-    desc: "Led the rebuild of bilingual public and intranet sites for the Social Sciences and Humanities Research Council, implementing WCAG 2.1 accessibility, Adobe Experience Manager workflows, and a new backend that meets Government of Canada security and performance standards.",
+    desc: "Led the rebuild of bilingual public and intranet sites for the Social Sciences and Humanities Research Council, implementing WCAG 2.1 accessibility, AEM workflows, and a performant, secure backend.",
     tech: ["AEM", "WCAG", "Government Standards", "Accessibility"],
   },
   {
     title: "NCR Microservice Re-architecture",
-    desc: "Directed a suite of high-traffic retail projects on AWS, designing a modular microservice pattern in React, TypeScript, and Node.js. Performance optimizations and rigorous test coverage improved overall project quality by 30% while shortening release cycles.",
+    desc: "Directed high-traffic retail projects on AWS, designing modular microservice patterns in React, TypeScript & Node.js; boosted delivery speed and project quality by 30%.",
     tech: ["AWS", "React", "Node.js", "TypeScript", "Microservices"],
   },
   {
@@ -231,132 +232,26 @@ export default function Index() {
 
       {/* Signature Projects */}
       <SectionFadeIn className="section pt-10" id="projects">
-        <h2 className="section-title text-3xl md:text-4xl heading-gradient mb-8 font-bold text-center">
-          Signature Projects
-        </h2>
+        <h2 className="section-title text-3xl md:text-4xl heading-gradient mb-8 font-bold text-center">Signature Projects</h2>
         <div className="projects-showcase grid md:grid-cols-2 gap-10 mt-3">
-          {/* SSHRC Digital Modernization */}
-          <div
-            className="project-card bg-glass border border-white/15 rounded-2xl overflow-hidden relative transition-transform"
-            style={{ animationDelay: `0.35s` }}
-          >
+          {projects.map((proj, i) => (
             <div
-              className="project-image h-[120px] md:h-[160px] bg-gradient-to-tr from-[#23b6fd] via-[#ff4bee] to-[#ff7c40]"
-              style={{
-                borderTopLeftRadius: '16px',
-                borderTopRightRadius: '16px',
-              }}
-            />
-            <div className="project-content p-6">
-              <h3 className="project-title text-lg font-semibold mb-2">
-                <span className="font-bold text-[#11b1d7]">SSHRC</span>{" "}
-                <span className="font-normal text-white">Digital </span>
-                <span className="font-bold text-[#ff4675]">Modernization</span>
-              </h3>
-              <div className="text-light opacity-85 text-base mb-3">
-                Led the rebuild of bilingual public and intranet sites for the Social Sciences and Humanities Research Council, 
-                implementing WCAG 2.1 accessibility, Adobe Experience Manager workflows, and a new backend that meets Government of Canada security and performance standards.
-              </div>
-              <div className="project-tech flex flex-wrap gap-2 mt-1">
-                <span className="tech-tag bg-[#0f0136] text-[#69eaff] border-0 font-medium">AEM</span>
-                <span className="tech-tag bg-[#124afa] text-white border-0 font-medium">WCAG</span>
-                <span className="tech-tag bg-[#21efa6] text-black border-0 font-medium">Government Standards</span>
-                <span className="tech-tag bg-[#ff4bee] text-white border-0 font-medium">Accessibility</span>
+              key={proj.title}
+              className="project-card bg-glass border border-white/15 rounded-2xl overflow-hidden relative transition-transform"
+              style={{ animationDelay: `${i * 0.1 + 0.35}s` }}
+            >
+              <div className="project-image h-[160px] bg-gradient-to-tr from-primary via-accent to-secondary" />
+              <div className="project-content p-6">
+                <h3 className="project-title text-lg font-semibold heading-gradient mb-2">{proj.title}</h3>
+                <div className="text-light opacity-85 text-base mb-3">{proj.desc}</div>
+                <div className="project-tech flex flex-wrap gap-2 mt-1">
+                  {proj.tech.map(t => (
+                    <span key={t} className="tech-tag bg-primary/10 text-primary border border-primary/50 rounded-full px-3 py-1 text-xs font-semibold">{t}</span>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* NCR Microservice Re-architecture */}
-          <div
-            className="project-card bg-glass border border-white/15 rounded-2xl overflow-hidden relative transition-transform"
-            style={{ animationDelay: `0.45s` }}
-          >
-            <div
-              className="project-image h-[120px] md:h-[160px] bg-gradient-to-tr from-[#15fde9] via-[#2b87ff] to-[#a365fc]"
-              style={{
-                borderTopLeftRadius: '16px',
-                borderTopRightRadius: '16px',
-              }}
-            />
-            <div className="project-content p-6">
-              <h3 className="project-title text-lg font-semibold mb-2">
-                <span className="font-bold text-[#25f0e5]">NCR</span>{" "}
-                <span className="font-normal text-white">Microservice </span>
-                <span className="font-bold text-[#fa37af]">Re-architecture</span>
-              </h3>
-              <div className="text-light opacity-85 text-base mb-3">
-                Directed a suite of high-traffic retail projects on AWS, designing a modular microservice pattern in React, TypeScript, and Node.js. Performance optimizations and rigorous test coverage improved overall project quality by 30% while shortening release cycles.
-              </div>
-              <div className="project-tech flex flex-wrap gap-2 mt-1">
-                <span className="tech-tag bg-[#18ceef] text-black border-0 font-medium">AWS</span>
-                <span className="tech-tag bg-[#3d30b2] text-white border-0 font-medium">React</span>
-                <span className="tech-tag bg-[#36c5f0] text-black border-0 font-medium">Node.js</span>
-                <span className="tech-tag bg-[#f76929] text-white border-0 font-medium">TypeScript</span>
-                <span className="tech-tag bg-[#3aeba7] text-black border-0 font-medium">Microservices</span>
-              </div>
-            </div>
-          </div>
-
-          {/* SurveyMonkey Insight Platform */}
-          <div
-            className="project-card bg-glass border border-white/15 rounded-2xl overflow-hidden relative transition-transform"
-            style={{ animationDelay: `0.55s` }}
-          >
-            <div
-              className="project-image h-[120px] md:h-[160px] bg-gradient-to-tr from-[#fbbf24] via-[#5e8cff] to-[#67fdec]"
-              style={{
-                borderTopLeftRadius: '16px',
-                borderTopRightRadius: '16px',
-              }}
-            />
-            <div className="project-content p-6">
-              <h3 className="project-title text-lg font-semibold mb-2">
-                <span className="font-bold text-[#fac700]">SurveyMonkey</span>{" "}
-                <span className="font-normal text-white">Insight </span>
-                <span className="font-bold text-[#3fa5ff]">Platform</span>
-              </h3>
-              <div className="text-light opacity-85 text-base mb-3">
-                Engineered next-generation market-research dashboards with React, TypeScript, REST, and GraphQL. The new data layer cut payload sizes and raised page-load performance by 20%, delivering faster insights to millions of survey users.
-              </div>
-              <div className="project-tech flex flex-wrap gap-2 mt-1">
-                <span className="tech-tag bg-[#ffa800] text-black border-0 font-medium">React</span>
-                <span className="tech-tag bg-[#4bbaff] text-black border-0 font-medium">TypeScript</span>
-                <span className="tech-tag bg-[#b4c0ff] text-black border-0 font-medium">GraphQL</span>
-                <span className="tech-tag bg-[#19e6cb] text-black border-0 font-medium">REST</span>
-                <span className="tech-tag bg-[#206791] text-white border-0 font-medium">AI/ML</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Slice Labs Serverless Insurance Suite */}
-          <div
-            className="project-card bg-glass border border-white/15 rounded-2xl overflow-hidden relative transition-transform"
-            style={{ animationDelay: `0.65s` }}
-          >
-            <div
-              className="project-image h-[120px] md:h-[160px] bg-gradient-to-tr from-[#7effb2] via-[#17cfd0] to-[#4160f9]"
-              style={{
-                borderTopLeftRadius: '16px',
-                borderTopRightRadius: '16px',
-              }}
-            />
-            <div className="project-content p-6">
-              <h3 className="project-title text-lg font-semibold mb-2">
-                <span className="font-bold text-[#10cb87]">Slice Labs</span>{" "}
-                <span className="font-normal text-white">Serverless </span>
-                <span className="font-bold text-[#235efc]">Insurance Suite</span>
-              </h3>
-              <div className="text-light opacity-85 text-base mb-3">
-                Built an end-to-end policy-issuance platform using React and Node.js, backed by serverless AWS services. The product powered a USD 10 million business launch and maintains high availability through automated cloud deployments.
-              </div>
-              <div className="project-tech flex flex-wrap gap-2 mt-1">
-                <span className="tech-tag bg-[#6cfcc3] text-black border-0 font-medium">React</span>
-                <span className="tech-tag bg-[#22919b] text-white border-0 font-medium">Node.js</span>
-                <span className="tech-tag bg-[#58dceb] text-black border-0 font-medium">AWS</span>
-                <span className="tech-tag bg-[#eafffc] text-black border-0 font-medium">Serverless</span>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </SectionFadeIn>
 
