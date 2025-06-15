@@ -97,7 +97,7 @@ const projects = [
     title: "Slice Labs Serverless Insurance Suite",
     desc: "Built an end-to-end policy-issuance platform using React & Node.js, powered a USD 10M business launch with serverless AWS and automated deployments.",
     tech: ["React", "Node.js", "AWS", "Serverless"],
-    image: "https://images.pexels.com/photos/164593/pexels-photo-164593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
 ];
 
