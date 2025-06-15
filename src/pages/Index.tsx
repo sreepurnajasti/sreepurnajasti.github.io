@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import CustomCursor from "@/components/CustomCursor";
@@ -244,10 +243,9 @@ export default function Index() {
               <div className="project-content p-6">
                 <h3 className="project-title text-lg font-semibold heading-gradient mb-2">{proj.title}</h3>
                 <div className="text-light opacity-85 text-base mb-3">{proj.desc}</div>
-                <div className="project-tech flex flex-wrap gap-2 mt-1">
-                  {proj.tech.map(t => (
-                    <span key={t} className="tech-tag bg-primary/10 text-primary border border-primary/50 rounded-full px-3 py-1 text-xs font-semibold">{t}</span>
-                  ))}
+                {/* Render tech as plain text, comma-separated */}
+                <div className="project-tech mt-1 text-primary/80 font-medium text-sm">
+                  {proj.tech.join(', ')}
                 </div>
               </div>
             </div>
