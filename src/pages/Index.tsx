@@ -16,10 +16,12 @@ const navLinks = [
 
 function typeWriterEffect(txt: string, setter: (s: string) => void, speed = 150) {
   let idx = 0;
+  let current = "";
   setter("");
   function type() {
     if (idx < txt.length) {
-      setter(prev => prev + txt.charAt(idx));
+      current += txt.charAt(idx);
+      setter(current);
       idx++;
       setTimeout(type, speed);
     }
