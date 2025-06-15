@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 :root {
-  --color-mint: rgba(0, 245, 255, 0.1);
+  --color-mint: rgba(255, 0, 110, 0.2);
 }
 
 body {
