@@ -26,7 +26,7 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#2563eb", // blue for light mode
+          DEFAULT: "#00f5ff", // consistent cyan for both modes
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -85,10 +85,10 @@ export default {
         },
         logoGlow: {
           "0%, 100%": {
-            filter: "drop-shadow(0 0 8px rgba(37,99,235,0.3))",
+            filter: "drop-shadow(0 0 8px rgba(0,245,255,0.3))",
           },
           "50%": {
-            filter: "drop-shadow(0 0 16px rgba(37,99,235,0.5))",
+            filter: "drop-shadow(0 0 16px rgba(0,245,255,0.5))",
           },
         },
       },

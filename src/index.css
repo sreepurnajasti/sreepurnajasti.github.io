@@ -11,20 +11,20 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar for dark/glass effect */
+/* Custom scrollbar - consistent dark styling for both modes */
 ::-webkit-scrollbar {
   width: 12px;
   background: #f8fafc; /* gray-50 for light mode */
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(37,99,235,0.3); /* blue for light mode */
+  background: rgba(0,245,255,0.3); /* consistent cyan for both modes */
   border-radius: 6px;
 }
 .dark::-webkit-scrollbar {
   background: #11182a;
 }
 .dark::-webkit-scrollbar-thumb {
-  background: rgba(0,245,255,0.2);
+  background: rgba(0,245,255,0.3); /* same cyan as light mode */
 }
 
 .bg-glass {
@@ -33,26 +33,26 @@ html {
   
   /* Light theme - softer white with better contrast */
   background-color: rgba(248, 250, 252, 0.85);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  border: 1px solid rgba(0, 245, 255, 0.15); /* consistent cyan border */
+  box-shadow: 0 2px 10px rgba(0,245,255,0.1); /* consistent cyan shadow */
 }
 
 .dark .bg-glass {
   background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.09);
-  box-shadow: 0 1.5px 20px  rgba(0,245,255,0.05);
+  border: 1px solid rgba(0,245,255,0.15); /* same cyan border */
+  box-shadow: 0 1.5px 20px rgba(0,245,255,0.1); /* same cyan shadow */
 }
 
 .heading-gradient {
-  /* Light mode: blue gradient */
-  background: linear-gradient(45deg, #2563eb, #7c3aed, #dc2626);
+  /* Consistent gradient for both modes - based on dark theme colors */
+  background: linear-gradient(45deg, #00f5ff, #ff006e, #8338ec);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .dark .heading-gradient {
-  /* Dark mode: cyan gradient */
+  /* Same gradient for dark mode */
   background: linear-gradient(45deg, #00f5ff, #ff006e, #8338ec);
   background-clip: text;
   -webkit-background-clip: text;
@@ -60,20 +60,24 @@ html {
 }
 
 .glow {
-  box-shadow: 0 0 20px rgba(37,99,235,0.2); /* blue glow for light mode */
+  box-shadow: 0 0 20px rgba(0,245,255,0.2); /* consistent cyan glow */
 }
 
 .dark .glow {
-  box-shadow: 0 0 20px #00f5ff33;
+  box-shadow: 0 0 20px rgba(0,245,255,0.2); /* same glow for dark */
 }
 
-/* Override primary color for dark mode */
-.dark {
-  --tw-text-primary: #00f5ff;
+/* Consistent primary color for both modes */
+.text-primary {
+  color: #00f5ff !important;
 }
 
 .dark .text-primary {
   color: #00f5ff !important;
+}
+
+.border-primary\/20 {
+  border-color: rgba(0, 245, 255, 0.2) !important;
 }
 
 .dark .border-primary\/20 {
