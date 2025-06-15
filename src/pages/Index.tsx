@@ -1,9 +1,11 @@
+
 import React, { useEffect } from "react";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import CustomCursor from "@/components/CustomCursor";
 import SectionFadeIn from "@/components/SectionFadeIn";
 import { Twitter, Linkedin } from "lucide-react";
 import Doodle from "@/components/Doodle";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -132,21 +134,24 @@ export default function Index() {
       <AnimatedBackground />
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-30 px-[5%] py-6 bg-glass border-b border-white/10">
+      <nav className="fixed top-0 w-full z-30 px-[5%] py-6 bg-glass border-b border-black/5 dark:border-white/10">
         <div className="flex justify-between items-center max-w-[1400px] mx-auto">
           <a href="#hero" className="logo font-bold text-2xl heading-gradient select-none animate-logoGlow cursor-pointer">sree</a>
-          <ul className="hidden md:flex gap-8 font-medium tracking-wide">
-            {navLinks.map(link => (
-              <li key={link.href}>
-                <a
-                  href={link.href}
-                  className="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div className="flex items-center gap-4 md:gap-8">
+            <ul className="hidden md:flex gap-8 font-medium tracking-wide">
+              {navLinks.map(link => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <ThemeToggle />
+          </div>
         </div>
       </nav>
 
@@ -184,11 +189,11 @@ export default function Index() {
         <div className="grid md:grid-cols-2 gap-10">
           {experiences.map((exp, i) => (
             <div key={exp.role}
-              className="skill-card bg-glass rounded-2xl border border-white/15 p-6 transition-transform relative hover:shadow-glow"
+              className="skill-card bg-glass rounded-2xl p-6 transition-transform relative hover:shadow-glow"
               style={{ animationDelay: `${i * 0.14 + 0.25}s` }}
             >
               <div className="font-bold text-lg mb-1 heading-gradient">{exp.role}</div>
-              <div className="text-light opacity-85 font-normal text-base">{exp.impact}</div>
+              <div className="opacity-85 font-normal text-base">{exp.impact}</div>
             </div>
           ))}
         </div>
@@ -201,12 +206,12 @@ export default function Index() {
           {skills.map((skill, i) => (
             <div
               key={skill.title}
-              className="skill-card bg-glass border rounded-2xl py-6 px-7 flex flex-col items-center transition-transform"
+              className="skill-card bg-glass rounded-2xl py-6 px-7 flex flex-col items-center transition-transform"
               style={{ animationDelay: `${i * 0.09 + 0.23}s` }}
             >
               <div className="skill-icon text-4xl mb-2">{skill.icon}</div>
               <h3 className="skill-title text-lg font-semibold mb-1 heading-gradient">{skill.title}</h3>
-              <div className="text-light/80 text-center text-base">{skill.items}</div>
+              <div className="text-dark/80 dark:text-light/80 text-center text-base">{skill.items}</div>
             </div>
           ))}
         </div>
@@ -219,13 +224,13 @@ export default function Index() {
           {projects.map((proj, i) => (
             <div
               key={proj.title}
-              className="project-card bg-glass border border-white/15 rounded-2xl overflow-hidden relative transition-transform"
+              className="project-card bg-glass rounded-2xl overflow-hidden relative transition-transform"
               style={{ animationDelay: `${i * 0.1 + 0.35}s` }}
             >
               <img src={proj.image} alt={proj.title} className="project-image h-[160px] w-full object-cover" />
               <div className="project-content p-6">
                 <h3 className="project-title text-lg font-semibold heading-gradient mb-2">{proj.title}</h3>
-                <div className="text-light opacity-85 text-base mb-3">{proj.desc}</div>
+                <div className="opacity-85 text-base mb-3">{proj.desc}</div>
                 <div className="project-tech mt-1 text-primary/80 font-medium text-sm">
                   {proj.tech.join(', ')}
                 </div>
@@ -256,3 +261,4 @@ export default function Index() {
     </>
   );
 }
+
