@@ -14,10 +14,10 @@ html {
 /* Custom scrollbar for dark/glass effect */
 ::-webkit-scrollbar {
   width: 12px;
-  background: #f3f4f6; /* gray-100 for light mode */
+  background: #f8fafc; /* gray-50 for light mode */
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0,0,0,0.2);
+  background: rgba(37,99,235,0.3); /* blue for light mode */
   border-radius: 6px;
 }
 .dark::-webkit-scrollbar {
@@ -32,7 +32,7 @@ html {
   -webkit-backdrop-filter: blur(18px); /* For Safari */
   
   /* Light theme - softer white with better contrast */
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(248, 250, 252, 0.85);
   border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
@@ -44,14 +44,40 @@ html {
 }
 
 .heading-gradient {
-  background: linear-gradient(45deg, #00f5ff,#ff006e,#8338ec);
+  /* Light mode: blue gradient */
+  background: linear-gradient(45deg, #2563eb, #7c3aed, #dc2626);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.dark .heading-gradient {
+  /* Dark mode: cyan gradient */
+  background: linear-gradient(45deg, #00f5ff, #ff006e, #8338ec);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .glow {
+  box-shadow: 0 0 20px rgba(37,99,235,0.2); /* blue glow for light mode */
+}
+
+.dark .glow {
   box-shadow: 0 0 20px #00f5ff33;
+}
+
+/* Override primary color for dark mode */
+.dark {
+  --tw-text-primary: #00f5ff;
+}
+
+.dark .text-primary {
+  color: #00f5ff !important;
+}
+
+.dark .border-primary\/20 {
+  border-color: rgba(0, 245, 255, 0.2) !important;
 }
 
 .fade-in-section {
