@@ -85,21 +85,19 @@ const projects = [
     title: "SSHRC Digital Modernization",
     desc: "Led the rebuild of bilingual public and intranet sites for the Social Sciences and Humanities Research Council, implementing WCAG 2.1 accessibility, AEM workflows, and a performant, secure backend.",
     tech: ["AEM", "WCAG", "Government Standards", "Accessibility"],
-  },
-  {
-    title: "NCR Microservice Re-architecture",
-    desc: "Directed high-traffic retail projects on AWS, designing modular microservice patterns in React, TypeScript & Node.js; boosted delivery speed and project quality by 30%.",
-    tech: ["AWS", "React", "Node.js", "TypeScript", "Microservices"],
+    image: "https://images.pexels.com/photos/2450296/pexels-photo-2450296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     title: "SurveyMonkey Insight Platform",
     desc: "Engineered next-gen market-research dashboards with React, TypeScript, REST, and GraphQL, cutting payloads and page-load times by 20%.",
     tech: ["React", "TypeScript", "GraphQL", "REST", "AI/ML"],
+    image: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     title: "Slice Labs Serverless Insurance Suite",
     desc: "Built an end-to-end policy-issuance platform using React & Node.js, powered a USD 10M business launch with serverless AWS and automated deployments.",
     tech: ["React", "Node.js", "AWS", "Serverless"],
+    image: "https://images.pexels.com/photos/164593/pexels-photo-164593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
 ];
 
@@ -232,14 +230,14 @@ export default function Index() {
       {/* Signature Projects */}
       <SectionFadeIn className="section pt-10" id="projects">
         <h2 className="section-title text-3xl md:text-4xl heading-gradient mb-8 font-bold text-center">Signature Projects</h2>
-        <div className="projects-showcase grid md:grid-cols-2 gap-10 mt-3">
+        <div className="projects-showcase grid md:grid-cols-3 gap-10 mt-3">
           {projects.map((proj, i) => (
             <div
               key={proj.title}
               className="project-card bg-glass border border-white/15 rounded-2xl overflow-hidden relative transition-transform"
               style={{ animationDelay: `${i * 0.1 + 0.35}s` }}
             >
-              <div className="project-image h-[160px] bg-glass" />
+              <img src={proj.image} alt={proj.title} className="project-image h-[160px] w-full object-cover" />
               <div className="project-content p-6">
                 <h3 className="project-title text-lg font-semibold heading-gradient mb-2">{proj.title}</h3>
                 <div className="text-light opacity-85 text-base mb-3">{proj.desc}</div>
