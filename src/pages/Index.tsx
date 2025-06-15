@@ -129,13 +129,13 @@ export default function Index() {
   }, []);
 
   return (
-    <>
+    <div className="max-w-[1100px] mx-auto">
       <CustomCursor />
       <AnimatedBackground />
 
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-30 px-[5%] py-6 bg-glass border-b border-black/5 dark:border-white/10">
-        <div className="flex justify-between items-center max-w-[1400px] mx-auto">
+      <nav className="fixed top-0 left-0 right-0 z-30 px-[5%] py-6 bg-glass border-b border-black/5 dark:border-white/10">
+        <div className="flex justify-between items-center max-w-[1100px] mx-auto">
           <a href="#hero" className="logo font-bold text-2xl heading-gradient select-none animate-logoGlow cursor-pointer">sree</a>
           <div className="flex items-center gap-4 md:gap-8">
             <ul className="hidden md:flex gap-8 font-medium tracking-wide">
@@ -156,7 +156,7 @@ export default function Index() {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="hero min-h-screen flex items-center justify-center relative text-center">
+      <section id="hero" className="hero min-h-screen flex items-center justify-center relative text-center px-[5%]">
         <div className="hero-content z-10 mt-20 md:mt-0">
           <h1 className="hero-title text-[clamp(2.5rem,7vw,5rem)] font-bold heading-gradient mb-3 animate-fadeInUp">
             {heroTitle}
@@ -166,25 +166,27 @@ export default function Index() {
             From full-stack craft to multi-cloud AI architecture, I transform bold ideas into secure, accessible products that users love.
           </h2>
           <a href="#contact" className="cta-button transition-all text-lg mt-6 font-semibold">
-            Let’s design the future together
+            Let's design the future together
           </a>
         </div>
       </section>
 
       {/* About */}
-      <SectionFadeIn className="section max-w-2xl mx-auto pt-32 pb-14" id="about">
-        <h2 className="section-title text-3xl md:text-4xl heading-gradient mb-8 font-bold text-center">About</h2>
-        <div className="text-lg leading-8 text-center opacity-90">
-          I am <span className="font-semibold">Sreepurna Jasti</span>, a developer-turned-architect who speaks the languages of React, Node, and Python as fluently as Azure and AWS.
-          <br className="hidden md:inline" />
-          For eight years I have shipped web and desktop applications, led cross-functional teams, and mastered the art of translating vision into code.
-          <br className="hidden md:inline" />
-          My next chapter focuses on architecting AI-first systems that are reliable, ethical, and human-centred.
+      <SectionFadeIn className="section px-[5%] pt-32 pb-14" id="about">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="section-title text-3xl md:text-4xl heading-gradient mb-8 font-bold text-center">About</h2>
+          <div className="text-lg leading-8 text-center opacity-90">
+            I am <span className="font-semibold">Sreepurna Jasti</span>, a developer-turned-architect who speaks the languages of React, Node, and Python as fluently as Azure and AWS.
+            <br className="hidden md:inline" />
+            For eight years I have shipped web and desktop applications, led cross-functional teams, and mastered the art of translating vision into code.
+            <br className="hidden md:inline" />
+            My next chapter focuses on architecting AI-first systems that are reliable, ethical, and human-centred.
+          </div>
         </div>
       </SectionFadeIn>
 
       {/* Experience */}
-      <SectionFadeIn className="section pt-10" id="experience">
+      <SectionFadeIn className="section px-[5%] pt-10" id="experience">
         <h2 className="section-title text-3xl md:text-4xl heading-gradient mb-8 font-bold text-center">Experience Highlights</h2>
         <div className="grid md:grid-cols-2 gap-10">
           {experiences.map((exp, i) => (
@@ -200,7 +202,7 @@ export default function Index() {
       </SectionFadeIn>
 
       {/* Skills */}
-      <SectionFadeIn className="section pt-10" id="skills">
+      <SectionFadeIn className="section px-[5%] pt-10" id="skills">
         <h2 className="section-title text-3xl md:text-4xl heading-gradient mb-8 font-bold text-center">Core Skills</h2>
         <div className="skills-grid grid md:grid-cols-3 gap-8 mt-5">
           {skills.map((skill, i) => (
@@ -218,7 +220,7 @@ export default function Index() {
       </SectionFadeIn>
 
       {/* Signature Projects */}
-      <SectionFadeIn className="section pt-10" id="projects">
+      <SectionFadeIn className="section px-[5%] pt-10" id="projects">
         <h2 className="section-title text-3xl md:text-4xl heading-gradient mb-8 font-bold text-center">Signature Projects</h2>
         <div className="projects-showcase grid md:grid-cols-3 gap-10 mt-3">
           {projects.map((proj, i) => (
@@ -241,7 +243,7 @@ export default function Index() {
       </SectionFadeIn>
 
       {/* Contact Section */}
-      <SectionFadeIn className="section pt-12 pb-20" id="contact">
+      <SectionFadeIn className="section px-[5%] pt-12 pb-20" id="contact">
         <div className="contact bg-glass rounded-2xl px-6 py-14 md:px-12 md:py-16 border border-primary/20 shadow-glow max-w-2xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
             <Doodle />
@@ -255,10 +257,9 @@ export default function Index() {
         </div>
       </SectionFadeIn>
 
-      <div className="text-center opacity-80 text-sm py-7">
+      <div className="text-center opacity-80 text-sm py-7 px-[5%]">
         © {new Date().getFullYear()} Sreepurna Jasti
       </div>
-    </>
+    </div>
   );
 }
-
