@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 
 const Doodle = () => {
@@ -71,9 +72,9 @@ const Doodle = () => {
                         <path id="shadow-2" className="shadow" d="M69.44,54A23.64,23.64,0,0,0,58.91,64.27c-4.39,7.87-4.1,30.52-7.61,41.23S40.76,124.26,41.93,135s2.64,12.27,2.64,12.27a66.65,66.65,0,0,1,14.93,1.88c7,1.89,18.42,5.48,18.42,5.48S63.6,166.53,61.84,176a67.23,67.23,0,0,0-2.34,18.26l20.89,1.9,16.19-34,11.42-12L109.91,75Z" opacity="0.09" style={{ isolation: 'isolate', transformOrigin: '0px 0px' }} data-svg-origin="75.8550910949707 125.07999420166016" transform="matrix(1,0,0,1,-0.52274,1.92485)"></path>
                         <path id="hair-back" className="hair" d="M127.63,45.17c2.65,1.35,11.15,4.2,16.07,23.12,2.88,20.58,3.79,26.07,4.68,30.6s1.2,11.6,6.3,21.15.85,14.65.85,14.65l-7.63,7.08s3.45-12.65-2.63-18.13c0,0,2,14,0,17s-8.75,6.92-8.75,6.92-2.48-4.53-5.06-9.64,2.78,11,.08,12.09-18.82,6.25-30.6,3.86-21.53-5-24-5.79c0,0,2.75-1.37.77-7.62s-1-7.59-1.52-7-2.1,3-1,7.49a7.45,7.45,0,0,1-1.92,7.18s-7.11-4.65-12.77-5.21A51.35,51.35,0,0,1,51,141.14s-5-11.43-.4-23.56S58,104.1,58.32,88.87s2.41-34.66,20.41-45S116.87,35.4,127.63,45.17Z" fill="url(#linear-gradient-hair)" data-svg-origin="102.92224884033203 95.71350479125977" transform="matrix(1,0,0,1,-0.83301,1.5918)" style={{ transformOrigin: '0px 0px' }}></path>
                         <path id="neck" d="M114.26 143.16v-14a9.22 9.22 0 10-18.43 0v14c-15.27 2.84-24.74 15.08-24.74 27.33H139c0-12.24-9.5-24.49-24.74-27.33z" fill="#ede3d1"></path>
-                        <path id="top" d="M105.61 167c-30.17 0-25.36-40-25.36 15.84h25.35l25-2.14c-.05-55.79 5.17-13.7-24.99-13.7z" fill="#00f5ff" stroke="#404040" strokeMiterlimit="10" strokeWidth="0.5"></path>
-                        <path id="shoulder" d="M95.82 142.87c-16 1.84-29.37 19.5-29.37 40h29.37z" fill="#404040"></path>
-                        <path id="shoulder-2" data-name="shoulder" d="M114.23 142.67c15.76 1.85 29 19.6 29 40.2h-29z" fill="#404040"></path>
+                        <path id="top" d="M105.61 167c-30.17 0-25.36-40-25.36 15.84h25.35l25-2.14c-.05-55.79 5.17-13.7-24.99-13.7z" fill="#ffffff" stroke="#404040" strokeMiterlimit="10" strokeWidth="0.5"></path>
+                        <path id="shoulder" d="M95.82 142.87c-16 1.84-29.37 19.5-29.37 40h29.37z" fill="#ffffff"></path>
+                        <path id="shoulder-2" data-name="shoulder" d="M114.23 142.67c15.76 1.85 29 19.6 29 40.2h-29z" fill="#ffffff"></path>
                     </g>
                     <path id="shadow-3" data-name="shadow" d="M95.82 122.36h18.41v14.31s-10.5 5.54-18.41 0z" fill="#efceb9"></path>
                     <g id="head" data-svg-origin="104.07083129882812 86.37029647827148" transform="matrix(1,0,0,1,0,0)" style={{ transformOrigin: '0px 0px' }}>
@@ -122,3 +123,4 @@ const Doodle = () => {
 };
 
 export default Doodle;
+
