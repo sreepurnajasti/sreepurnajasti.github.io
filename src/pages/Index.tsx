@@ -9,7 +9,6 @@ const navLinks = [
   { label: "Experience", href: "#experience" },
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
-  { label: "Philosophy", href: "#philosophy" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -99,21 +98,6 @@ const projects = [
     tech: ["React", "Node.js", "AWS", "Serverless"],
     image: "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
-];
-
-const philosophies = [
-  {
-    heading: "Human-First AI",
-    text: "Technology succeeds only when users feel heard. I embed accessibility and ethics into every sprint.",
-  },
-  {
-    heading: "Design as Dialogue",
-    text: "Interfaces should talk, guide, and delight. Motion, depth, and micro-copy are my vocabulary.",
-  },
-  {
-    heading: "Cloud Without Borders",
-    text: "Workloads deserve the best home. Vendor neutrality and IaC keep solutions portable and future-proof.",
-  }
 ];
 
 export default function Index() {
@@ -245,19 +229,6 @@ export default function Index() {
                   {proj.tech.join(', ')}
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </SectionFadeIn>
-
-      {/* Philosophy */}
-      <SectionFadeIn className="section pt-10" id="philosophy">
-        <h2 className="section-title text-3xl md:text-4xl heading-gradient mb-8 font-bold text-center">Philosophy</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {philosophies.map(p => (
-            <div key={p.heading} className="bg-glass rounded-2xl border border-white/10 px-7 py-8 shadow-glow fade-in-section text-center">
-              <div className="text-lg heading-gradient font-bold mb-2">{p.heading}</div>
-              <div className="text-light/80">{p.text}</div>
             </div>
           ))}
         </div>
