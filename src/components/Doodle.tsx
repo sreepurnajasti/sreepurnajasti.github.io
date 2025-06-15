@@ -2,13 +2,18 @@
 import React from 'react';
 
 const Doodle = () => (
-    <svg className="w-40 h-40 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 10 211.73 180">
+    <svg className="w-60 h-60 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 10 211.73 180">
         <defs>
             <linearGradient id="linear-gradient-hair" x1="102.94" y1="154.47" x2="102.94" y2="36.93" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stopColor="#8338ec"></stop>
-                <stop offset="0.01" stopColor="#8338ec"></stop>
-                <stop offset="0.54" stopColor="#ff006e"></stop>
-                <stop offset="1" stopColor="#ff006e"></stop>
+                <stop offset="0" stopColor="#000"></stop>
+                <stop offset="0.01" stopColor="#000"></stop>
+                <stop offset="0.54" stopColor="#000"></stop>
+                <stop offset="1" stopColor="#000"></stop>
+            </linearGradient>
+            <linearGradient id="colorful-bg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stopColor="#8338ec" />
+                <stop offset="0.5" stopColor="#ff006e" />
+                <stop offset="1" stopColor="#00f5ff" />
             </linearGradient>
             <clipPath id="clip-path">
                 <path d="M39 153.73s31.57 19.71 77.26 15.21 90.18-37.23 90.36-72.33-8.82-80.28-33.59-86.29C136.84-6.57 114.13-5.82 88-2.82S34.73 11.45 16.71 48.24C-1.5 66.64-4.88 125.2 39 153.73z" fill="none"></path>
@@ -18,7 +23,7 @@ const Doodle = () => (
             </clipPath>
             <path opacity="0" id="yawn-clip" d="M105.4 117.65c6 0 7.67-1.66 7.3-5.83s-2.64-10.27-7.86-10.27-6.48 6.37-6.85 9.92 1.38 6.18 7.41 6.18z" fill="#fff"></path>
         </defs>
-        <path id="bg" d="M39 153.73s31.57 19.71 77.26 15.21 90.18-37.23 90.36-72.33-10.51-57-35.28-63-50.22 17-76.31 20-60.12-15.88-78.32 2.51S-4.88 125.2 39 153.73z" fill="var(--color-mint)" data-svg-origin="105.32126712799072 101.11200714111328" transform="matrix(1,0,0,1,0,0)" style={{ transformOrigin: '0px 0px' }}></path>
+        <path id="bg" d="M39 153.73s31.57 19.71 77.26 15.21 90.18-37.23 90.36-72.33-10.51-57-35.28-63-50.22 17-76.31 20-60.12-15.88-78.32 2.51S-4.88 125.2 39 153.73z" fill="url(#colorful-bg)" data-svg-origin="105.32126712799072 101.11200714111328" transform="matrix(1,0,0,1,0,0)" style={{ transformOrigin: '0px 0px' }}></path>
         <g clipPath="url(#clip-path)">
             <g id="me" data-name="me" data-svg-origin="102.23083877563477 199.74785232543945" transform="matrix(1,0,0,1,0,0)" style={{ opacity: 1, transformOrigin: '0px 0px' }}>
                 <g id="body">
@@ -67,7 +72,7 @@ const Doodle = () => (
                             <path id="blush-left" className="eye" d="M89.9 98.17a2.66 2.66 0 01-1.55-.93 3.73 3.73 0 01-.76-3.12 3 3 0 011-1.56 2 2 0 011.4-.42 3 3 0 012.5 2.72.76.76 0 010 .21 3.19 3.19 0 01.11.91 2.1 2.1 0 01-1.77 2.21 2.07 2.07 0 01-.93-.02zM89.34 96v-.05s-.04.05 0 .05z" fill="#efceb9" fillRule="evenodd" data-svg-origin="87.51107788085938 92.13317108154297" transform="matrix(1,0,0,1,0.39091,0.6694)" style={{ transformOrigin: '0px 0px' }}></path>
                             <path id="blush-right" className="eye" d="M118.93 98.19a2.09 2.09 0 01-1.77-2.19 3.58 3.58 0 01.1-.91v-.21a3 3 0 012.51-2.72 2 2 0 011.4.42 3 3 0 011 1.56 3.73 3.73 0 01-.76 3.12 2.66 2.66 0 01-1.55.93 2.08 2.08 0 01-.93 0zm1.53-2.2v.05c0 .05.05-.04 0-.04z" fill="#efceb9" fillRule="evenodd" data-svg-origin="117.15631866455078 92.1531753540039" transform="matrix(1,0,0,1,0.39086,0.66822)" style={{ transformOrigin: '0px 0px' }}></path>
                         </g>
-                        <path id="hair-front" d="M134.1,57.61C129.22,51.79,118,45,115.33,44.84s-13-1.87-20.65,0-16,4.51-18.77,8.26-6.17,18-4.77,24.41c0,0,3-3.09,10.46-5.73h0s.74-6.33,1.45-7.18a32.29,32.29,0,0,0-.1,6.73,59.67,59.67,0,0,1,8.22-2,37,37,0,0,1,.25-8.11,67.11,67.11,0,0,0,.54,8c2-.32,4.18-.59,6.52-.78h0s.18-2.82.61-5.5c0,0,.28,3.33.6,5.42,1.78-.12,3.64-.19,5.62-.21a76.76,76.76,0,0,1,9.11.45c-.05-2.15,0-6.82-.22-7.36s1.07,2.06,1.54,7.52a51.14,51.14,0,0,1,8.84,1.92c.23-2.37.41-5.93-.3-7.88,0,0,2.1,5,1.9,8.42h0c8.36,3,11.06,7.25,11.06,7.25S139,63.43,134.1,57.61Z" fill="#8338ec" data-svg-origin="70.81439971923828 43.9721794128418" transform="matrix(1,0,0,1,0.4656,0.75712)" style={{ transformOrigin: '0px 0px' }}></path>
+                        <path id="hair-front" d="M134.1,57.61C129.22,51.79,118,45,115.33,44.84s-13-1.87-20.65,0-16,4.51-18.77,8.26-6.17,18-4.77,24.41c0,0,3-3.09,10.46-5.73h0s.74-6.33,1.45-7.18a32.29,32.29,0,0,0-.1,6.73,59.67,59.67,0,0,1,8.22-2,37,37,0,0,1,.25-8.11,67.11,67.11,0,0,0,.54,8c2-.32,4.18-.59,6.52-.78h0s.18-2.82.61-5.5c0,0,.28,3.33.6,5.42,1.78-.12,3.64-.19,5.62-.21a76.76,76.76,0,0,1,9.11.45c-.05-2.15,0-6.82-.22-7.36s1.07,2.06,1.54,7.52a51.14,51.14,0,0,1,8.84,1.92c.23-2.37.41-5.93-.3-7.88,0,0,2.1,5,1.9,8.42h0c8.36,3,11.06,7.25,11.06,7.25S139,63.43,134.1,57.61Z" fill="#000" data-svg-origin="70.81439971923828 43.9721794128418" transform="matrix(1,0,0,1,0.4656,0.75712)" style={{ transformOrigin: '0px 0px' }}></path>
                     </g>
                 </g>
             </g>

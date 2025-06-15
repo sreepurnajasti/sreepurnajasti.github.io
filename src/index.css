@@ -1,11 +1,6 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --color-mint: rgba(255, 0, 110, 0.2);
-}
 
 body {
   @apply bg-dark text-light font-space-grotesk scroll-smooth;
