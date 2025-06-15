@@ -239,11 +239,10 @@ export default function Index() {
               className="project-card bg-glass border border-white/15 rounded-2xl overflow-hidden relative transition-transform"
               style={{ animationDelay: `${i * 0.1 + 0.35}s` }}
             >
-              <div className="project-image h-[160px] bg-gradient-to-tr from-primary via-accent to-secondary" />
+              <div className="project-image h-[160px] bg-glass" />
               <div className="project-content p-6">
                 <h3 className="project-title text-lg font-semibold heading-gradient mb-2">{proj.title}</h3>
                 <div className="text-light opacity-85 text-base mb-3">{proj.desc}</div>
-                {/* Render tech as plain text, comma-separated */}
                 <div className="project-tech mt-1 text-primary/80 font-medium text-sm">
                   {proj.tech.join(', ')}
                 </div>
